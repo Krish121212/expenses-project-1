@@ -3,7 +3,7 @@
 set -e
 
 err_report() {
-    echo "Error on line $1 .. $2"
+    echo "Error on line number: $1, error command $2"
 }
 
 trap 'err_report ${line}  ${command}' ERR
