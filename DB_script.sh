@@ -16,7 +16,7 @@ systemctl enable mysqld &>>$LOGFILE
 systemctl start mysqld &>>$LOGFILE
 #Validate $? "starting mysql"
 
-mysql -h 172.31.29.2 -uroot -p${DB_password} -e "show databases" &>>$LOGFILE
+mysql -h 172.31.29.2 -uroot -p${DB_password} -e "show databases;" &>>$LOGFILE
     if [ $? != 0 ]
     then
         mysql_secure_installation --set-root-pass ${DB_password} &>>$LOGFILE
