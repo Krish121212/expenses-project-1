@@ -6,7 +6,7 @@ err_report() {
     echo "Error on line number: $1, error command $2"
 }
 
-trap 'err_report ${line}  ${command}' ERR
+trap 'err_report ${line}  "$BASH_COMMAND"' ERR
 
 userid=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
