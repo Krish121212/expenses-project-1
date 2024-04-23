@@ -1,5 +1,13 @@
 #!/bin/bash/
 
+set -e
+
+err_report() {
+    echo "Error on line $1 .. $2"
+}
+
+trap 'err_report ${line}  ${command}' ERR
+
 userid=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d '.' -f1)
