@@ -2,7 +2,7 @@
 
 source /home/ec2-user/expenses-project-1/common.sh
 
-check_root_user()
+check_root_user
 
 echo "please enter DB password:"
 read -s "DB_password"
