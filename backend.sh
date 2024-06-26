@@ -55,16 +55,3 @@ Validate $? "Connecting to DB"
 
 systemctl restart backend &>>$LOGFILE
 Validate $? "restarting backend"
-
-
-
-
-
-
-
-
-
-
-
-
-
